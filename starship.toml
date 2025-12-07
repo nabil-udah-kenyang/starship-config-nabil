@@ -1,0 +1,78 @@
+# ────────────────────────────────
+# 🌈 STARSHIP CONFIG BY NABIL TZY
+# ────────────────────────────────
+
+format = """
+[](fg:#DE5D09) [](fg:#00FF9C)[$username](bold bright-cyan) [on](bold white) [$hostname](bold bright-yellow)[  ](fg:#FFFFFF) | [](bright-cyan) [$directory](bold bright-green) \
+$git_branch $python $nodejs $rust $c
+[󱞩](bold white) """
+
+add_newline = true
+
+# ────────────────────────────────
+# USERNAME & HOSTNAME
+# ────────────────────────────────
+[username]
+show_always = true
+style_user = "italic bright-cyan"
+format = " NabilTzy"
+
+[hostname]
+ssh_only = false
+style = "italic bright-yellow"
+format = "$hostname"
+
+# ────────────────────────────────
+# DIRECTORY
+# ────────────────────────────────
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = " bright-green"
+read_only = " 🔒"
+format = "($path)($style)"
+
+# ────────────────────────────────
+# GIT
+# ────────────────────────────────
+[git_branch]
+symbol = " "
+style = " bright-yellow"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = " bright-red"
+format = "([$all_status$ahead_behind]($style)) "
+
+# ────────────────────────────────
+# LANGUAGES
+# ────────────────────────────────
+[python]
+symbol = "🐍 "
+style = " bright-yellow"
+format = "via [$symbol v$version]($style) "
+
+[nodejs]
+symbol = " "
+style = " bright-green"
+format = "via [$symbol v$version]($style) "
+
+[rust]
+symbol = "🦀 "
+style = " bright-red"
+format = "via [$symbol v$version]($style) "
+
+[c]
+symbol = " "
+style = " bright-blue"
+format = "via [$symbol v$version]($style) "
+
+# ────────────────────────────────
+# CMD DURATION (selalu tampil)
+# ────────────────────────────────
+[cmd_duration]
+min_time = 0
+style = "bold bright-cyan"
+format = "took [$duration]($style)"
+show_milliseconds = true
+
